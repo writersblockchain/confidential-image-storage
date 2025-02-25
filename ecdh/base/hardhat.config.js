@@ -13,8 +13,8 @@ module.exports = {
     },
   },
   networks: {
-    polygon: {
-      url: `https://polygon-mumbai.infura.io/v3/${process.env.INFURA_KEY}`,
+    base: {
+      url: `https://base-sepolia.infura.io/v3/${process.env.INFURA_KEY}`,
       accounts: [process.env.PRIVATE_KEY],
     },
   },

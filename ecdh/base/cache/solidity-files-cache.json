@@ -1,7 +1,7 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/Users/seanconrad/Desktop/ecdh-encrypt/polygon/contracts/Encrypt.sol": {
+    "/Users/seanconrad/Desktop/confidential-image-storage/ecdh/base/contracts/Encrypt.sol": {
       "lastModificationDate": 1740496769751,
       "contentHash": "db335f2707bf2e08054c6fe8cea20566",
       "sourceName": "contracts/Encrypt.sol",

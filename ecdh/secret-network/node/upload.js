@@ -1,15 +1,15 @@
 const { SecretNetworkClient, Wallet } = require("secretjs");
-const dotenv = require("dotenv");
-dotenv.config({ path: "../../polygon/.env" });
+// const dotenv = require("dotenv");
+// dotenv.config({ path: "../../polygon/.env" });
 const fs = require("fs");
 
-const wallet = new Wallet(process.env.MNEMONIC);
+const wallet = new Wallet("shed clerk spray velvet flower tide cherry idea public solar prize tackle");
 
-const contract_wasm = fs.readFileSync("../contract.wasm.gz");
+const contract_wasm = fs.readFileSync("./contract.wasm.gz");
 
 const secretjs = new SecretNetworkClient({
   chainId: "pulsar-3",
-  url: "https://lcd.pulsar-3.secretsaturn.net",
+  url: "https://pulsar.lcd.secretnodes.com",
   wallet: wallet,
   walletAddress: wallet.address,
 });
