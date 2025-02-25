@@ -4,3 +4,11 @@
 
 
 rm -rf .git
+
+create branch: 
+
+git branch sean
+
+switch to branch: 
+
+git checkout sean
