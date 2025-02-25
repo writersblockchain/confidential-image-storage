@@ -1,0 +1,40 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/seanconrad/Desktop/ecdh-encrypt/polygon/contracts/Encrypt.sol": {
+      "lastModificationDate": 1740496769751,
+      "contentHash": "db335f2707bf2e08054c6fe8cea20566",
+      "sourceName": "contracts/Encrypt.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Encrypt"
+      ]
+    }
+  }
+}
