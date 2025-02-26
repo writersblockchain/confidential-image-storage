@@ -8,3 +8,4 @@
 **/cargo.lock
 **/.DS_Store
 .env
+wallet_data.txt
