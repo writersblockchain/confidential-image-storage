@@ -2,10 +2,13 @@
 **/node_modules/
 **/target/
 
+
 # Ignore specific files at any level
 **/contract.wasm
 **/contract.wasm.gz
 **/cargo.lock
 **/.DS_Store
-.env
-wallet_data.txt
+/agent/.env
+/ecdh/base/.env
+/agent/wallet_data.txt
+/agent/eng.traineddata
