@@ -1,6 +1,6 @@
 const fs = require("fs");
 const { ethers } = require("hardhat");
-require("dotenv").config();
+require("dotenv").config({ path: "../../../.env" });
 
 async function query_encrypt() {
   const contractAddress = process.env.CONTRACT_ADDRESS;

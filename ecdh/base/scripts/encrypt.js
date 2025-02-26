@@ -6,11 +6,11 @@ const dotenv = require("dotenv");
 let provider = new miscreant.PolyfillCryptoProvider();
 let ciphertext;
 
-let publicKey = dotenv.config().parsed.SECRET_PUBLIC_KEY;
+let publicKey = dotenv.config({ path: "../../../.env" }).parsed.SECRET_PUBLIC_KEY;
 let publicByteArray = publicKey.split(",").map((num) => parseInt(num, 10));
 let publicKeyUint8Array = new Uint8Array(publicByteArray);
 
-let privateKey = dotenv.config().parsed.ECC_PRIVATE_KEY;
+let privateKey = dotenv.config({ path: "../../../.env" }).parsed.ECC_PRIVATE_KEY;
 let privateByteArray = privateKey.split(",").map((num) => parseInt(num, 10));
 let privateKeyUint8Array = new Uint8Array(privateByteArray);
 // console.log(privateKeyUint8Array);

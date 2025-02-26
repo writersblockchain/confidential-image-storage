@@ -23,9 +23,15 @@ import {
   import { z } from 'zod';
   import Tesseract from 'tesseract.js';
   import multer, { FileFilterCallback } from 'multer';
+
+
+  const { generateKeysIfMissing } = require("./generateKeys");
+  const { encryptData } = require("./encryption");
+  const { storeEncryptedData } = require("./storeEncrypted");
   
-  dotenv.config();
-  
+  dotenv.config({ path: "../.env" });
+  generateKeysIfMissing();
+
   const WALLET_DATA_FILE = 'wallet_data.txt';
   
   // Multer setup for image uploads
@@ -212,6 +218,22 @@ import {
               response += chunk.tools.messages[0].content;
             }
           }
+
+          // Extract the summary
+          const summary = response.split("- Summary:")[1]?.trim() || "No summary found";
+
+
+          // Do something with the summary (e.g., log it)
+          console.log('Extracted Summary:', summary);
+          // Encrypt the summary with a salt
+          encryptData({ message: summary, salt: Math.random() })
+            .then(async (encryptedSummary: any) => {
+              console.log("Encrypted Summary:", encryptedSummary);
+              await storeEncryptedData(encryptedSummary);
+            })
+            .catch((err: any) => console.error("Encryption/Store error:", err));
+
+
   
           // Clean up the file (already handled in customOcrAction, but ensure it’s gone)
           if (fs.existsSync(imagePath)) {

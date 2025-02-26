@@ -1,7 +1,7 @@
 const { fromBase64, fromHex, toUtf8 } = require("@cosmjs/encoding");
 const { ethers } = require("hardhat");
 const { encrypt } = require("./encrypt.js");
-require("dotenv").config();
+require("dotenv").config({ path: "../../../.env" });
 
 const encryptAddress = process.env.CONTRACT_ADDRESS; // Replace with your deployed contract's address
 

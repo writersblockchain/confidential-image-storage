@@ -18,7 +18,7 @@ try {
   publicKey = secp256k1.publicKeyCreate(privateKey);
 
   // Path to your .env file
-  const envFilePath = path.join(__dirname, "../../.env");
+  const envFilePath = path.join(__dirname, "../../../.env");
 
   // Read the current contents of the file
   let envContents = "";

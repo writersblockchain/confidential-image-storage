@@ -1,6 +1,6 @@
 import { SecretNetworkClient, Wallet } from "secretjs";
 import dotenv from "dotenv";
-dotenv.config({ path: "../../base/.env" });
+dotenv.config({ path: "../../../.env" });
 
 const wallet = new Wallet(process.env.MNEMONIC);
 

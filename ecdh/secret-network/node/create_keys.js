@@ -1,6 +1,6 @@
 const { SecretNetworkClient, Wallet } = require("secretjs");
 const dotenv = require("dotenv");
-dotenv.config({ path: "../../base/.env" });
+dotenv.config({ path: "../../../.env" });
 
 const wallet = new Wallet(process.env.MNEMONIC);
 

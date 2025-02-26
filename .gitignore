@@ -8,7 +8,6 @@
 **/contract.wasm.gz
 **/cargo.lock
 **/.DS_Store
-/agent/.env
-/ecdh/base/.env
+.env
 /agent/wallet_data.txt
 /agent/eng.traineddata
