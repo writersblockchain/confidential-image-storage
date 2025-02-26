@@ -7,3 +7,4 @@
 **/contract.wasm.gz
 **/cargo.lock
 **/.DS_Store
+.env
