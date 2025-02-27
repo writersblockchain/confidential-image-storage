@@ -14,7 +14,7 @@ async function query_encrypt() {
   const contract = new ethers.Contract(contractAddress, abi, provider);
 
   // Query the contract
-  const index = 0; // Adjust based on the data you want to query
+  const index = 1; // Adjust based on the data you want to query
   const data = await contract.getStoredData(index);
   console.log("Encrypted Data:", data);
 }
