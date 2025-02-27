@@ -11,3 +11,4 @@
 .env
 /agent/wallet_data.txt
 /agent/eng.traineddata
+/agent/venv39/
